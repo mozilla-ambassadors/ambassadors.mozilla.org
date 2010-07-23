@@ -1,7 +1,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
     <head>
-        <meta http-equiv="Content-Type" content="text/html;charset=UTF8" />
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
         <meta http-equiv="Content-Script-Type" content="text/ecmascript" />
         <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
         
@@ -57,7 +57,7 @@
             }
             ul#menu li a[href ^="http"] {
                 padding-right: 12px;
-                background: url(https://jetpack.mozillalabs.com/images/external.png) right 70% no-repeat;
+                background: url(external.png) right 70% no-repeat;
             }
             ul#menu li a {
                 display: block;
@@ -103,7 +103,23 @@
                 border: #ADB6BA solid;
                 -moz-border-bottom-colors:#ADB6BA #E7EAEC #E7EAEC;
                 border-width: 1px 1px 3px;
-
+                -moz-transition-duration: 0.3s;
+                -moz-transition-delay: 0.3s;
+                top: 0;
+            }
+            ul#ambassadors li:hover {
+                -moz-box-shadow: 0 2px 2px #345B7D;
+                box-shadow: 0 2px 2px #345B7D;
+                top: -2px;
+                -moz-transition-duration: 0.1s;
+                -moz-transition-delay: 0s;
+            }
+            ul#ambassadors li:hover dd a {
+                text-decoration: underline;
+            }
+            ul#ambassadors li:hover h3 a {
+                padding-right: 12px;
+                background: url(link.png) no-repeat right 40%;
             }
             ul#ambassadors li h3 {
                 font-weight: normal;
@@ -185,7 +201,7 @@
             <h2>Meet the ambassadors</h2>
             <ul id="ambassadors">
                 <li class="Europe">
-                    <h3>Christian Sonne</h3>
+                    <h3><a href="" title="Full profile">Christian Sonne</a></h3>
                     <img src="cers.png" alt="" />
                     <dl class="contact">
                         <dt class="email">Email</dt>
