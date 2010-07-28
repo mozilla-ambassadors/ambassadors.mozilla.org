@@ -150,7 +150,6 @@ ul#ambassadors li dl dd address {
   font-style: normal;
   line-height: 1.2;
 }
-ul#ambassadors li a {
-  color: black;
-  text-decoration: none;
+ul#ambassadors li a:visited {
+  color: blue;
 }
