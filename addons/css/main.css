@@ -1,66 +1,98 @@
 
 body {
-  background: #DBDBDB url(https://jetpack.mozillalabs.com/images/back.jpg) no-repeat top center fixed;
+  background:url("/addons/img/jetpack-bg.jpg") no-repeat scroll center top #FFFFFF;
+  margin:0;
+  padding:0;
 }
+
+#header {
+  background-color:rgba(9, 0, 166, 0.7);
+  color:#FFFFFF;
+  height:60px;
+  padding:0;
+  width:100%;
+}
+
+#header div {
+  font-family:georgia,times,serif;
+  font-weight:bold;
+  font-size:20px;
+  margin:0 auto;
+  padding:15px 0 0;
+  width:950px;
+}
+
+a img {
+  border:0;
+}
+
+.navItemContainer {
+background-color:rgba(79, 134, 166, 0.1);
+font-family:"MuseoSans";
+font-size:14px;
+left:0;
+text-align:left;
+text-decoration:none;
+text-transform:uppercase;
+width:100%;
+}
+
+.navItem {
+margin:0 auto;
+padding:16px 0;
+width:950px;
+}
+
+.sideLogo {
+margin:-38px auto;
+padding:2px;
+width:76px;
+border:0;
+}
+
 h1 {
-  text-indent: -9999px;
   background: url(logo.png) no-repeat top left;
-  width: 885px;
-  height: 158px;
-  margin: 80px auto 0 auto;
+  margin: 30px auto 0 auto;
 }
 h1, h2 {
   font-family: "DroidSans", sans-serif;
   color: #404041;
 }
+
 ul#menu {
-  -moz-border-bottom-colors:#ADB6BA #E7EAEC #E7EAEC;
-  -moz-border-radius:0.25em 0.25em 0.25em 0.25em;
-  background-color:#FFFFFF;
-  border-color:#ADB6BA;
-  border-style:solid;
-  border-width:1px 1px 3px;
-  margin: 20px auto;
-  max-width:800px;
-  padding:0 40px;
+  margin:-20px 0 0 76px;
+  padding:0 0 10px 0;
   text-align:left;
-  width:800px;
   list-style: none;
-  display: block;
-  height: 28px;
   font-family: "DroidSans", sans-serif;
 }
 ul#menu li {
-  display: block;
   height: 100%;
   padding: 0;
   float: left;
-  margin: 0 10px;;
+  margin: 0 10px;
 }
 ul#menu li.active {
-  background-color:rgba(173, 182, 186, 0.3);
-}
-ul#menu li.active a:hover {
-  border-bottom: none;
+  background-color:rgba(255, 255, 255, 0.7);
 }
 ul#menu li.active a {
   color: #345B7D;
 }
 ul#menu li a[href ^="http"] {
-  padding-right: 12px;
-  background: url(external.png) right 70% no-repeat;
+  padding-right: 15px;
+}
+ul#menu li a[href ^="http"]:hover {
+  background: url(/addons/img/external.png) right no-repeat #FFFFFF;
+}
+ul#menu li a:hover {
+  background-color:#FFFFFF;
 }
 ul#menu li a {
-  display: block;
-  float: left;
   text-decoration: none;
   color: #9F423B;
   font-size:14px;
   text-shadow:1px 1px 1px rgba(173, 182, 186, 0.6);
-  padding: 8px 8px 0;
-}
-ul#menu li a:hover {
-  border-bottom: 1px dotted #9F423B;
+  padding: 5px;
 }
 
 div#content {
