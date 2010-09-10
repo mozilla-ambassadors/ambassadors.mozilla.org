@@ -1,5 +1,11 @@
 # Django settings for mozamb project.
 
+import os
+
+# Make filepaths relative to settings.
+ROOT = os.path.dirname(os.path.abspath(__file__))
+path = lambda *a: os.path.join(ROOT, *a)
+
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
@@ -42,6 +48,8 @@ MEDIA_ROOT = ''
 # trailing slash if there is a path component (optional in other cases).
 # Examples: "http://media.lawrence.com", "http://example.com/media/"
 MEDIA_URL = ''
+
+HTDOCS = path('htdocs')
 
 # URL prefix for admin media -- CSS, JavaScript and images. Make sure to use a
 # trailing slash.
