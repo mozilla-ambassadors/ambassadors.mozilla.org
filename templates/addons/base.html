@@ -1,8 +1,38 @@
-<html>
-  <head>
-    <title>{% block title %}Mozilla Add-ons Ambassadors{% endblock %}</title>
-  </head>
-  <body>
-    
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+        <meta http-equiv="Content-Script-Type" content="text/ecmascript" />
+        <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+
+        <title>{% block title %}Mozilla Add-ons Ambassadors{% endblock %}</title>
+
+        <link href="css/main.css" rel="stylesheet" media="screen" />
+        <script type="text/ecmascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+        <!--<script type="text/ecmascript" src="http://google-ajax-examples.googlecode.com/svn/trunk/whereareyou/scripts/geometa.js"></script>-->
+        <script type="text/ecmascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+        <script type="text/ecmascript" src="js/index.js"></script>
+    </head>
+
+    <body>
+        <div id="header">
+            <div><a title="Mozilla Add-on Ambassadors" rel="home" href="/addons/"><img src="/addons/img/mozilla-addon-ambassadors-logo.png" alt="Mozilla Ambassadors" /></a></div>
+        </div>
+
+        <div class="navItemContainer">
+          <div class="navItem">
+            <a title="Mozilla Add-on Ambassadors" rel="home" href="/addons/"><img alt="Mozilla Add-ons" src="/addons/img/logo-add-ons-half-80x76.png" class="sideLogo" /></a>
+              <ul id="menu">
+                <li{% if page_name == "index" %} class="active"{% endif %}><a title="Mozilla Add-on Ambassadors" rel="home" href="/addons/">Home</a></li>
+                <li{% if page_name == "meet-the-ambassadors" %} class="active"{% endif %}><a title="Meet the Mozilla Add-on Ambassadors" href="/addons/meet-the-ambassadors.html">Meet the ambassadors</a></li>
+                <li{% if page_name == "find-your-addon-ambassador" %} class="active"{% endif %}><a title="Find Your Add-on Ambassador" href="/addons/find-your-addon-ambassador.html">Find your ambassador</a></li>
+                <li><a title="Mozilla Labs' Jetpack Project" href="https://jetpack.mozillalabs.com/">Project Jetpack</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div id="content">
+{% block content %}{% endblock %}
+        </div>
   </body>
 </html>
