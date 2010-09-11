@@ -6,6 +6,10 @@ import os
 ROOT = os.path.dirname(os.path.abspath(__file__))
 path = lambda *a: os.path.join(ROOT, *a)
 
+# We need to track this because we don't want to call a checkout "mozamb".
+# It puts it in a dir called "workspace".
+ROOT_PACKAGE = os.path.basename(ROOT)
+
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
@@ -74,12 +78,12 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.messages.middleware.MessageMiddleware',
 )
 
-ROOT_URLCONF = 'mozamb.urls'
+#ROOT_URLCONF = 'mozamb.urls'
+ROOT_URLCONF = '%s.urls' % ROOT_PACKAGE
 
 TEMPLATE_DIRS = (
-    # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
-    # Always use forward slashes, even on Windows.
-    # Don't forget to use absolute paths, not relative paths.
+    path('templates'),
+    path('simple-pages'),
 )
 
 INSTALLED_APPS = (
