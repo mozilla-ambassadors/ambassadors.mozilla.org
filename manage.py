@@ -1,5 +1,10 @@
 #!/usr/bin/env python
 from django.core.management import execute_manager
+
+import site
+site.addsitedir('vendor')
+site.addsitedir('vendor/lib/python')
+
 try:
     import settings # Assumed to be in the same directory.
 except ImportError:
