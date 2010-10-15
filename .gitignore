@@ -1,4 +1,11 @@
+*.py[co]
+*.sw[po]
 .project
+.pydevproject
 .settings
 .tmp*
-.*.swp
+.DS_Store
+settings_local.py
+vendor
+pip-log.txt
+
