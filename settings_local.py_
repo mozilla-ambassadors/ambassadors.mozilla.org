@@ -1,0 +1,10 @@
+from settings import *
+
+DEBUG = False
+TEMPLATE_DEBUG = DEBUG
+
+ADMINS = (
+    ('Erik Vold', 'erikvvold@gmail.com'),
+    # ('Your Name', 'your_email@domain.com'),
+)
+
