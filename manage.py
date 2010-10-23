@@ -1,9 +1,10 @@
 #!/usr/bin/env python
-from django.core.management import execute_manager
 
 import site
 site.addsitedir('vendor')
 site.addsitedir('vendor/lib/python')
+
+from django.core.management import execute_manager
 
 try:
     import settings_local as settings
