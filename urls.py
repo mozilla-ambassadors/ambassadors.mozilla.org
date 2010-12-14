@@ -6,6 +6,7 @@ from django.conf import settings
 # admin.autodiscover()
 
 urlpatterns = patterns('',
+    (r'^$', 'views.addons_view'),
     (r'^addons/(?P<qryStr>([\?#].*)?)$', 'views.addons_redirect', {'path': 'index.html'}),
     (r'^addons/(?P<page_name>[^/\.]*)\.html([\?#].*)?$', 'views.addons_rootpg_view'),
 
